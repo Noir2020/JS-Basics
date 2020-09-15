@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mariya's homework</h1>
+    <p>1. Update code from previous homework (updating and logging employee summary) to use a function. Write a function, that will accept employee object as a function argument and log employee summary in the console, the same way you did it last time. This should fairly easy with minimal changes to your initial code.
+        Save your function as HTML file (exercise1.html).</p>
+    <script>
+        let employee = {
+        name: 'Mohammad',
+        age: 17,
+        location: 'New York',
+        paycheckHistory: [
+        {
+            month: 'August',
+            amount: 2000
+        },
+        {
+            month: 'September',
+            amount: 1000
+        }
+        ]
+        };
+        // exercise1
+
+        // option1(function declaration):
+        function log(employee) {
+            console.log(`${employee.name} is ${employee.age} years old,
+            lives in New York and his last paycheck was ${employee.paycheckHistory[1].amount}.`)
+        }
+        log(employee);
+        
+        employee.age +=1;
+        employee.paycheckHistory[1].amount=3000;
+        log(employee);
+        
+        
+        // option2(function expression):
+        let employeeSum = function(employee) {
+            console.log(`${employee.name} is ${employee.age} years old,
+            lives in New York and his last paycheck was ${employee.paycheckHistory[1].amount}.`)
+        }
+        employeeSum(employee);
+        
+        employee.age +=1;
+        employee.paycheckHistory[1].amount=3000;
+        employeeSum(employee);
+        
+        
+        // option3(arrow function):
+        let employeeSummary1 = (employee) => {
+            console.log(`${employee.name} is ${employee.age} years old,
+            lives in New York and his last paycheck was ${employee.paycheckHistory[1].amount}.`)
+        }
+        employeeSummary1(employee);
+        
+        employee.age +=1;
+        employee.paycheckHistory[1].amount=3000;
+        employeeSummary1(employee);
+    </script>
+</body>
+</html>

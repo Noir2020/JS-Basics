@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Mariya's homework</h1>
+<p>
+2. Write Fahrenheit to Celsius converter function. 
+<li>- Call the function `fahrenheitToCelsius`</li>
+<li>- Function should take one parameter (tempF)</li>
+<li>- Function should log in the console: "NN°F is NN°C." where NN should be replaced with respective F and C temperature numbers</li>
+<li>- Return temperature in Celsius</li>
+</p>
+<p>
+Reference:
+https://www.mathsisfun.com/temperature-conversion.html
+Save your function as HTML file (exercise2.html).
+</p>
+<script>
+// exercise2
+
+// option1(function declaration):
+function fahrenheitToCelsius(tempF) {
+    let tempC = (tempF -32) *  5/9; 
+    console.log(`${tempF}°F is ${tempC}°C.`)
+}
+fahrenheitToCelsius(80);
+
+// option2(function expression):
+let fahrenheitToCelsius1 = function(tempF1) {
+    let tempC1 = (tempF1 -32) *  5/9; 
+    console.log(`${tempF1}°F is ${tempC1}°C.`)
+}
+fahrenheitToCelsius1(90);
+
+
+let fahrenheitToCelsius3 = function(tempF3) {
+    if(!tempF3) {
+        console.log("Enter a valid number")
+    }else{
+    let tempC3 = (tempF3 -32) *  5/9; 
+    console.log(`${tempF3}°F is ${tempC3}°C.`)
+    }
+}
+fahrenheitToCelsius3(90);
+
+// option3(arrow function):
+let fahrenheitToCelsius2 = (tempF2) => {
+    let tempC2 = (tempF2 -32) *  5/9; 
+    console.log(`${tempF2}°F is ${tempC2}°C.`)
+}
+fahrenheitToCelsius2(100);
+</script>
+</body>
+</html>

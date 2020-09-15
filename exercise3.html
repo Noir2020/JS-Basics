@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Mariya's homework</h1>
+<p> 
+3. Write a function that calculates students grade and percent of total possible score. 
+<li>- Function should take two parameters, score and total possible score</li>
+<li>- Function should return result string, i.e. for 15/20 it should return: "You got a C (75%)!"</li>
+<li>- Following % ranges should be used for calculating grade letter: A 90-100, B 80-89, C 70-79, D 60-69, F 0-59</li>
+<li>- Invoke the function with some arguments and log result in the console</li>
+Save your function as HTML file (exercise3.html).
+</p>
+<script>
+
+// exercise3
+
+// option1(function declaration):
+function studentsGrade(score, total) {
+    const grade = Math.floor((score/total)*100);
+    if(grade>=90 && grade<=100) {
+        console.log(`You got A (${grade}%) Excellent job!`);
+    }else if(grade>=80 && grade<=89) {
+        console.log(`You got B (${grade}%) Good job!`);
+    }else if(grade>=70 && grade<=79) {
+        console.log(`You got C (${grade}%)!`);
+    }else if(grade>=60 && grade<=69) {
+        console.log(`You got D (${grade}%)`);
+    }else if(grade>=0 && grade<=59) {
+        console.log(`You got F (${grade}%)`);
+    }else{
+        console.log("Invalid number.");
+    }
+}
+studentsGrade(88,102);
+
+
+
+// option2(function expression):
+let studentsGrade1 = function(score1, total1) {
+    const grade1 = Math.floor((score1/total1)*100);
+    if(grade1>=90 && grade1<=100) {
+        console.log(`You got A (${grade1}%) Excellent job!`);
+    }else if(grade1>=80 && grade1<=89) {
+        console.log(`You got B (${grade1}%) Good job!`);
+    }else if(grade1>=70 && grade1<=79) {
+        console.log(`You got C (${grade1}%)!`);
+    }else if(grade1>=60 && grade1<=69) {
+        console.log(`You got D (${grade1}%)`);
+    }else if(grade1>=0 && grade1<=59) {
+        console.log(`You got F (${grade1}%)`);
+    }else{
+        console.log("Invalid number.");
+    }
+}
+studentsGrade1(92,102);
+
+
+// option3(arrow function):
+let studentsGrade2 = (score2, total2) => {
+    const grade2 = Math.floor((score2/total2)*100);
+    if(grade2>=90 && grade2<=100) {
+        console.log(`You got A (${grade2}%) Excellent job!`);
+    }else if(grade2>=80 && grade2<=89) {
+        console.log(`You got B (${grade2}%) Good job!`);
+    }else if(grade2>=70 && grade2<=79) {
+        console.log(`You got C (${grade2}%)!`);
+    }else if(grade2>=60 && grade2<=69) {
+        console.log(`You got D (${grade2}%)`);
+    }else if(grade2>=0 && grade2<=59) {
+        console.log(`You got F (${grade2}%)`);
+    }else{
+        console.log("Invalid number.");
+    }
+}
+studentsGrade2(64,102);
+</script>
+</body>
+</html>
